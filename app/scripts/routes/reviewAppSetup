@@ -1,0 +1,19 @@
+steps to begin building prototype website
+
+1 - setup search
+
+	- get it to return results
+	- start displaying results
+	- get auto complete working
+
+	- add parse
+	- make search query place_id on parse and return results
+	- start displaying results
+
+	search is complete.....
+
+2 - setup pages
+
+	- get cell to click into new view
+	- get it to return results
+	

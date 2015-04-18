@@ -1,0 +1,56 @@
+<h4>Reviews</h4>
+
+<% if (places.length > 0 ) { %>
+	<% for(var i=0; i<places.length; i++) { %>
+
+		<% if ( review_ids.indexOf(places[i].place_id) != -1 ) { %>
+
+			<div class="panel panel-default">
+
+				  <div class="panel-heading">
+				  		<%= places[i].name %> <%= places[i].rating %>    <%= places[i].vicinity %>
+				  </div>
+				  <div class="panel-body">
+				    <p> <%= reviews[i].get('description') %> </p>
+				  </div>
+
+				  <ul class="list-group">
+				    <li class="list-group-item">
+				    	<img class="img-responsive" src="<%= places[i].photos[0].getUrl({'maxWidth': 35, 'maxHeight': 35}) %>"/>
+				    </li>
+				    <li class="list-group-item">Like              Share</li>
+				  </ul>
+			</div>
+
+		<% }else{ %>
+				<div class="panel panel-default">
+
+				  <div class="panel-heading">
+				  		<%= places[i].name %> <%= places[i].rating %>    <%= places[i].vicinity %>
+				  </div>
+				  <div class="panel-body">
+				    <p> Be the first to review this place! </p>
+				  </div>
+
+				  <ul class="list-group">
+				    <li class="list-group-item">
+				    <% if (places[i].photos != undefined ) { %>
+				    	<img class="img-responsive" src="<%= places[i].photos[0].getUrl({'maxWidth': 650, 'maxHeight': 450}) %>"/>
+				    <% } %>
+				    </li>
+				    <li class="list-group-item">Like              Share</li>
+				  </ul>
+				</div>
+
+		<% } %>
+
+	<% } %>
+<% } else { %>
+	
+	<div class="panel-heading">
+		<h4>Could Not Find Any Results</h3>
+	</div>
+
+<% } %>
+
+

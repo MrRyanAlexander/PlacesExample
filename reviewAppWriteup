@@ -1,0 +1,137 @@
+"find places nearby"
+
+query for places
+	- returns result array
+	- extract place_ids
+
+"see if their are reviews for place_ids"
+
+query parse for place_ids
+	
+
+
+lets say that each search for places is limited to 10 results
+
+we want to show the user the top pic reviews related to these places so
+
+starting with the first result
+
+check for place_id in parse
+
+if the id exists continue; otherwise load this place without pic reviews
+
+find the latest pic review; load the place with pic review
+
+
+while the table is being filled with 10 results, the user can begin scrolling
+
+if the user clicks on a place
+
+query parse for last 10 pic reviews for this place, skip the first pic review
+
+while the table is being filled with 10 pic reviews, the user can begin scrolling
+
+both tables behave the same way. 
+
+when a user begins scrolling to the end, we fetch more results as available
+
+each pic review contains :
+
+
+This example is for foods....                 This example is for hotels...
+------------------------------				 --------------------------------
+Review Name  *****rating, dist				 Reviewer Name *****rating, dist
+ 
+ their review in no more than 					their review in no more than
+ 140 characters. 								140 characters.
+
+------------------------------				 --------------------------------
+
+
+
+		LARGE IMAGE										LARGE IMAGE
+
+
+
+-------------------------------				 --------------------------------
+    Like          Share							Like 			Share
+-------------------------------			     --------------------------------
+Open: Yes 8am - 9pm 						 Price: $35 - $75	
+Contact : 310 - xxx - xxxx					 Book Now || Check Availability
+Address : xyz drive, LA, 90745				 Address : xyz drive, LA, 90745
+-------------------------------			     --------------------------------
+
+
+
+This example is for a food place             This example is for a hotel
+--------------------------------			 --------------------------------
+	Name of food places  							Name of Hotel
+***** rating, #reviews, #likes				 ***** rating, #reviews, #likes
+--------------------------------			 --------------------------------
+
+
+	Lastest Review Image 						   Latest Review Image
+	    as background								as background
+
+--------------------------------			 --------------------------------
+
+$5 meals, Kids under 5 eat free 			 from $35 night Book Now || Avail
+get direction        CLICK HERE				 get directions        CLICK HERE
+ride Uber            CHECK RATE              ride Uber             CHECK RATE
+contact              CLICK HERE				 contact               CLICK HERE
+--------------------------------			 --------------------------------
+	User Submitted Reviews 						  User Submitted Reviews
+--------------------------------		     --------------------------------
+Reviewer Name  ***rating, dist				 Reviewer Name    ***Rating, dist
+ 
+ their review in no more than 					their review in no more than
+ 140 characters. 								140 characters.
+
+------------------------------				 --------------------------------
+
+
+
+		LARGE IMAGE										LARGE IMAGE
+
+
+
+-------------------------------				 --------------------------------
+    Like          Share							Like 			Share
+-------------------------------			     --------------------------------
+
+------------------------------				 --------------------------------
+Review Name  *****rating, dist				 Reviewer Name *****Rating, dist
+ 
+ their review in no more than 					their review in no more than
+ 140 characters. 								140 characters.
+
+------------------------------				 --------------------------------
+
+
+
+		LARGE IMAGE										LARGE IMAGE
+
+
+
+-------------------------------				 --------------------------------
+    Like          Share							Like 			Share
+-------------------------------			     --------------------------------
+
+------------------------------				 --------------------------------
+Review Name  *****rating, dist				 Reviewer Name *****Rating, dist
+ 
+ their review in no more than 					their review in no more than
+ 140 characters. 								140 characters.
+
+------------------------------				 --------------------------------
+
+
+
+		LARGE IMAGE										LARGE IMAGE
+
+
+
+-------------------------------				 --------------------------------
+    Like          Share							Like 			Share
+-------------------------------			     --------------------------------
+
